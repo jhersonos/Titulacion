@@ -29,3 +29,59 @@ textarea{
 	top: 25%;
 	transition: top 0.9s;
 }
+/**Reutilizable**/
+.red{
+	color: red;
+}
+/****************/
+/*****Registro Alumno*******/
+
+.container{
+	width: 100%;
+	height: 100%;
+}
+.container .registro{
+	width: 48%;
+	min-height: 510px;
+	position: relative;
+	left: 25%;
+	/*left: 6px*/
+	margin-left: 30px;
+	top: 60px;
+	padding: 10px;
+	box-shadow: 0px 1px 5px black;
+	transition: left 0.9s;
+	display: inline-block;
+}
+#cod{
+	position: relative;
+	top: 3px;
+}
+.container .container-carnet{
+	width: 48%;
+	min-height: 510px;
+	position: relative;
+	top: 83px;
+	opacity: 0;
+	padding: 1px;
+	display: inline-block;
+	-webkit-transition-duration:1.5s;
+	-moz-transition-duration: 1.5s; 
+	 -o-transition-duration: 1.5s;
+	transition-duration: 1.5s;
+}
+.container .container-carnet .carnet{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.container .container-carnet .carnet img{
+	width: 80%;
+	height: 50%;
+	display: block;
+}
+/***************************/
+
+
+
+

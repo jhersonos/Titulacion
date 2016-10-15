@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Libertador</title>
+	<link rel="stylesheet" type="text/css" href="components/semantic/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/registro.js"></script>
+</head>
+<body>
+<div class="container">
+	<div class="registro">
+		<form class="ui form" id="save-alumno">
+				<div class="field">
+					<h1>Registro Alumno</h1>
+				</div>
+				<div class="field">
+					<h3><span class="red">*</span>Datos personales</h3>
+				</div>
+				<div class="field">
+				    <label>Nombre Alumno:</label>
+				    <div class="two fields">
+					    <div class="field">
+				        	<input type="text" name="first-name" placeholder="Nombre">
+			      		</div>
+			      		<div class="field">
+					        <input type="text" name="last-name" placeholder="Apellido">
+					      </div>
+		      		</div>
+		      	</div>
+				<div class="field">
+					<label>DNI:</label>
+					<input type="text" name="dni-alumno" placeholder="DNI Estudiante">
+				</div>
+				<div class="field">
+					<h3><span class="red">*</span>Datos Academico</h3>
+				</div>
+				<div class="field">
+					<label>Carrera</label>
+					<select name="carrera"></select>
+				</div>
+				<div class="field">
+					<label>Inicio Carrera:</label>
+					<div class="two fields">
+						<div class="field">
+							<input type="date" name="start-carrera">
+						</div>
+						<div class="field">
+							<input type="text" name="codigo-carrera" placeholder="Codigo Carrera">
+						</div>
+					</div>
+				</div>
+				<div class="field">
+      					<label>
+      						<input type="checkbox" tabindex="0" class="hidden" id="cod">
+      						Generar Codigo Alumno 
+      					</label>
+				</div>
+				<div class="field">
+					<button class="ui black button" type="submit">Registrar</button>
+				</div>
+		</form>
+	</div>
+	<div class="container-carnet">
+		<div class="carnet">
+			<img src="img/front.png">
+			<img src="img/back.png">
+		</div>
+	</div>
+</div>
+</body>
+</html>
