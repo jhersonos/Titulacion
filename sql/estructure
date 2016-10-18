@@ -1,0 +1,6 @@
+Alumno > idalumno - Nombre - apellidos - fecha-inicio - carrera - codigo - estado - fecha
+
+tarjeta > idtarjeta - NombreAlumno - carrera - codigo - fechainicio - estado - fecha
+
+Asistencia > idasistencia - idalumno - codigoalumno - idtarjeta - carrera - hora_entrada
+
