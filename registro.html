@@ -43,12 +43,12 @@
 				</div>
 				<div class="field">
 					<label>Codigo</label>					
-					<input type="text" name="codigo">
+					<input type="text" id="codigo" name="codigo">
 				</div>
 				<div class="field">
       					<label>
       						<input type="checkbox" tabindex="0" class="hidden" id="cod">
-      						Generar Codigo Alumno 
+      						Generar Codigo Automatico 
       					</label>
 				</div>
 				<div class="field">
@@ -58,8 +58,21 @@
 	</div>
 	<div class="container-carnet" id="container-carnet">
 		<div class="carnet">
-			<img id="front" src="img/front.png">
-			<img id="back" src="img/back.png">
+			<div class="head-carnet">
+				<h2>
+					<span class="title-codeb">Codigo Generado</span>
+				</h2>
+			</div>
+			<div class="body-carnet" id="body-carnet">
+				
+			</div>
+			<div class="foot-carnet">
+				<form id="form-create-carnet">
+					<button type="submit" class="ui blue button">Crear carnet</button>
+				</form>
+			</div>
+			<!--<img id="front" src="img/front.png">
+			<img id="back" src="img/back.png">-->
 		</div>
 	</div>
 </div>

@@ -77,13 +77,62 @@ textarea{
 	width: 100%;
 	height: 100%;
 }
+.container .container-carnet .carnet .head-carnet{
+	width: 100%;
+    height: 20%;
+    text-align: center;
+}
+.container .container-carnet .carnet .head-carnet h2{
+	width: 100%;
+	height: 100%;
+}
+.container .container-carnet .carnet .head-carnet h2 .title-codeb{
+	position: relative;
+	top: 25%;
+}
+.container .container-carnet .carnet .body-carnet{
+	width: 100%;
+    height: 60%;
+}
+.container .container-carnet .carnet .body-carnet img{
+	position: relative;
+	margin-left: 10%;
+    top: 25%;
+}
+.container .container-carnet .carnet .foot-carnet{
+	width: 100%;
+    height: 20%;
+    text-align: center;
+}
+.container .container-carnet .carnet .foot-carnet button{
+	position: relative;
+	top: 35%;
+}
+/**********codigoQr************/
 .container .container-carnet .carnet img{
 	width: 80%;
 	height: 50%;
 	display: block;
 }
-/***************************/
+/*****************************/
 
+.paginator{
 
-
+}
+.paginator ul li{
+	width: 20px;
+	height: 20px;
+	background-color: black;
+	color:white;
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
+	display: inline-block;
+}
+.activex{
+	display: inline-block !important;
+}
+.none{
+	display: none !important;
+}
 
