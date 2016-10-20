@@ -6,8 +6,13 @@ include('../conexion/conexion.php');
 	$dni 			= $_POST['dni-alumno'];		//dni alumno
 	$carrera 		= $_POST['carrera'];		//carrera alumno
 	$inicio_carrera = $_POST['start-carrera'];	//inicio de la carrera
-	//$codigocarrera  = $_POST['codigo-carrera'];	//codigo carrera <-> aun por ver
-	$codigo_barra	= $_POST['codigo'];			//codigo de barra
+	$autogenerate = $_POST['cod'];
+	if (isset($autogenerate)) {					// valida si el check de codigo autogenerado esta marcado
+		$codigo_barra 	= substr($nombre, 2); 	// crear codigo de barra
+	}else{
+		$codigo_barra	= $_POST['codigo'];		//codigo de barra manual
+	}
+
 	$hoy = date("Ymd");							//obtener fecha actual
 
 	//armar consulta de insercion a la base de datos - tabla : alumnos

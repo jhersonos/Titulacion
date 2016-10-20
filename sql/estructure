@@ -4,3 +4,23 @@ tarjeta > idtarjeta - NombreAlumno - carrera - codigo - fechainicio - estado - f
 
 Asistencia > idasistencia - idalumno - codigoalumno - idtarjeta - carrera - hora_entrada
 
+
+
+*-----------------------------------*
+|		formulario - registro		|
+|									|	
+|	nombre 							| 
+|	ape 							|
+|	f_i								|
+|	codigo 							|
+|									|
+*-----------------------------------*
+*-----------------------------------*
+|		formulario - registro		|
+|									|	
+|	nombre 							| 
+|	ape 							|
+|	f_i								|
+|	codigo 							|
+|									|
+*-----------------------------------*

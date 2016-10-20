@@ -15,7 +15,7 @@ textarea{
 	border-radius:5px;
 	background-color: #0D00D4;
 	border-color: #0D00D4;
-	color: white; 
+	color: white;
 	box-shadow: 5px 5px 5px black;
 }
 .content-code{
@@ -135,4 +135,11 @@ textarea{
 .none{
 	display: none !important;
 }
-
+#calendario{
+	width: 35%;
+}
+@media only screen and (max-width: 700px) {
+	#calendario{
+		width: 100%;
+	}
+}

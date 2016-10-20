@@ -1,13 +1,18 @@
+<?php include('../conexion/conexion.php'); 
+	$sql = "select * from carrera where estado='1'";
+	$res=mysql_query($sql,$con);
+?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Libertador</title>
-	<link rel="stylesheet" type="text/css" href="components/semantic/semantic.min.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="js/registro.js"></script>
-	<script type="text/javascript" src="js/export_image.js"></script>
+	<link rel="stylesheet" type="text/css" href="../components/semantic/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="../js/registro.js"></script>
+	<script type="text/javascript" src="../js/export_image.js"></script>
 </head>
 <body>
 <div class="container">
@@ -32,14 +37,19 @@
 		      	</div>
 				<div class="field">
 					<label>Fecha inicio:</label>
-					<input type="date" name="start-carrera" style="width: 25%;">
+					<input type="date" name="start-carrera" id="calendario">
 				</div>
 				<div class="field">
 					<h3><span class="red">*</span>Datos Academico</h3>
 				</div>
 				<div class="field">
 					<label>Carrera</label>
-					<select name="carrera"></select>
+					<select name="carrera">
+							<option value="">-- Seleccione carrera --</option>
+						<?php while ($file=mysql_fetch_array($res)) {	?>
+							<option value="<?php echo $file['idcarrera'] ?>"><?php echo $file["name_carrera"]; ?></option>
+						<?php } ?>
+					</select>
 				</div>
 				<div class="field">
 					<label>Codigo</label>					
@@ -47,7 +57,7 @@
 				</div>
 				<div class="field">
       					<label>
-      						<input type="checkbox" tabindex="0" class="hidden" id="cod">
+      						<input type="checkbox" tabindex="0" name="cod" id="cod">
       						Generar Codigo Automatico 
       					</label>
 				</div>
