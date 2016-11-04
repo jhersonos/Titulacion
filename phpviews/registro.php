@@ -2,6 +2,7 @@
 	$sql = "select * from carrera where estado='1'";
 	$res=mysql_query($sql,$con);
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
 	<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="../js/registro.js"></script>
-	<script type="text/javascript" src="../js/export_image.js"></script>
+
 </head>
 <body>
 <div class="container">
@@ -78,8 +79,11 @@
 			</div>
 			<div class="foot-carnet">
 				<form id="form-create-carnet">
-					<button type="submit" class="ui blue button">Crear carnet</button>
+					<button type="submit" class="ui blue button" onclick="save()" id="save-code">Guardar codigo</button>
 				</form>
+			</div>
+			<div class="none" id="save-img"> 
+				
 			</div>
 			<!--<img id="front" src="img/front.png">
 			<img id="back" src="img/back.png">-->

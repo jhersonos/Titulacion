@@ -3,6 +3,11 @@ $( document ).ready(function() {
 	$("#save-alumno").submit(function(e) {
 		var url = "../php/save-alumno.php"; 
 		var codigo="codigo";/** obtener codigo o generar automatico **/
+		if(document.getElementById('cod').checked) {
+		   codigo="auto" //codigo="ramdon automatico"
+		} else {
+		   codigo="manual" //codigo="chapar nombre apellido"
+		}
 		var formData = new FormData($('#save-alumno')[0]);
 		$.ajax({
 		       type: "POST",
@@ -23,28 +28,12 @@ $( document ).ready(function() {
 			        console.log("Error: " + err); 
 			    }
 		     });
-
+		/* Canclear recarga de la pagina al submitear el archivex! */	
 		e.preventDefault(); // avoid to execute the actual submit of the form.
 	});
 
+	$('#save-code').on('click',function(e){
+		
 
-	$('#form-create-carnet').on('click',function(e){
-		var code = $("#codigo").val();
-		$.ajax({
-				type: "POST",
-		      	url: '../php/carnet.php',
-		       	data:code,
-		       	contentType: false,
-    			processData: false,
-    			success: function(data)
-		       {
-		       		//send codigo para crear carnet
-		           console.log(data)
-					$("#body-carnet").html('<img src="php/barcode.php?text='+codigo+'" alt="testing" width="500" height="100" />')
-		       }
-		});
-		e.eventDefault()
 	})
-
-
 });
