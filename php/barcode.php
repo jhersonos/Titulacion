@@ -116,12 +116,15 @@ function barcode( $filepath="", $text="0", $size="20", $orientation="horizontal"
 		$location = $cur_size;
 	}
 	
+	
 	// Draw barcode to the screen or save in a file
 	if ( $filepath=="" ) {
 		header("Content-type: image/png");
 		imagepng($image);
 		imagedestroy($image);
+
 	} else {
+		header("Content-type: image/png");
 		imagepng($image,$filepath);
 		imagedestroy($image);		
 	}

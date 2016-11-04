@@ -78,8 +78,9 @@
 				
 			</div>
 			<div class="foot-carnet">
-				<form id="form-create-carnet">
-					<button type="submit" class="ui blue button" onclick="save()" id="save-code">Guardar codigo</button>
+				<form id="form-create-carnet" method="POST" action="../php/savecode.php">
+					<button type="submit" class="ui blue button" id="save-code">Guardar codigo</button>
+					<input type="hidden" id="source" name="source"></input>
 				</form>
 			</div>
 			<div class="none" id="save-img"> 
