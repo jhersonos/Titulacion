@@ -1,0 +1,44 @@
+html,body{
+	margin: 0;
+	box-sizing: 0;
+}
+body{
+  	overflow: hidden;
+}
+* {
+    box-sizing: border-box;
+}
+.head{
+	background-color: #ff0000;
+	color: white;
+}
+.derecha{
+	float: right;
+}
+.white{
+	color: white;
+	cursor: pointer;
+}
+.white:hover{
+	color: white;
+}
+.left-20{
+	margin-left: 20px;
+}
+.menu{
+	width: 90px;
+	height: 100%;
+	background-color: #E7E7E7;
+	padding: 15px;
+}
+.newitem{
+	text-align: center;
+    padding-top: 5px;
+    padding-left: 0 !important;
+    padding-top: 10px !important;
+}
+.red{
+	color:red;
+}.red:hover{
+	color:white;
+}
