@@ -1,0 +1,50 @@
+html,body{
+	margin: 0;
+	box-sizing: 0;
+}
+body{
+	background-image: url('../img/back.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+  	background-position: center;
+}
+.index-all{
+
+}
+.index-all .body{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+.index-all .body form{
+	width: 350px;
+	height: 350px;
+}
+.index-all .foot{
+    position: fixed;
+    bottom: 35%;
+    left: -291px;
+    /* left: 0; */
+    transition: 1.5s;
+}
+.inline{
+	display: inline-block;
+}
+.left-50{
+	margin-left: 50px;
+}
+.arrow{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    padding: 10px 16px;
+    position: absolute;
+    right: -22px;
+    top: 90px;
+}
+.left-0{
+	left: 0 !important;
+}

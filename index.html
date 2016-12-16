@@ -1,22 +1,66 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-<title>Generador de c�digos QR</title>
-<link rel="stylesheet" type="text/css" href="css/main.css">
-<script type="text/javascript" src="js/qrcode.js"></script>
+	<meta charset="utf-8">		
+	<link rel="stylesheet" type="text/css" href="components/semantic/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<title>Asis</title>
 </head>
 <body>
-<div class="content-code" data-role="content">
-<form class="form-code" id="form-code">
-<h1>
-	ISL CODE GENERATOR
-</h1>	
-<textarea name="msg" rows="10" cols="40">Texto a codificar</textarea><br> 
-<input class="button-code" type="button" value="Generar" onclick="update_qrcode()">
-</form>
-<div id="qr"></div>
-</div>
-<a href="phpviews/registro.php" style="font-size: 16px;color: black;position: relative;top: -134px;">Ir a generador de codigo de barras</a>
+	<div class="index-all">
+		<div class="body">
+			<form id="login" class="ui form">
+				<div class="field">
+					<h1 class="inline left-50">AsisController</h1>
+					<i class="green big checkmark box icon"></i>
+				</div>
+				<div class="field">
+					<label>Usuario</label>
+   					<input type="text" required="true" name="first-name" placeholder="Ingrese nombre de usuario">
+				</div>
+				<div class="field">
+					<label>Contraseña</label>
+   					<input type="password" required="true" name="first-name" placeholder="Ingrese contraseña">
+				</div>
+				<button class="ui button">
+					Ingresar
+				</button>
+				<a class="ui button">
+					Olvide mi contraseña
+				</a>
+			</form>
+		</div>
+		<div class="foot">
+			<div class="ui card">
+			  <div class="content">
+			    <div class="header">¿Quienes somos?</div>
+			    <div class="meta">
+			      <span class="right floated time">2016</span>
+			      <span class="category">Titulacion</span>
+			    </div>
+			    <div class="description">
+			      <p>
+			      	Grupo de titulacion de la promocion 2017, somos un equipo de 5 personas la cual desarrollamos este sistema de asistencias con el objetivo de ...
+			      </p>
+			    </div>
+			  </div>
+			  <div class="extra content">
+			    <div class="right floated author">
+			    	<button class="ui facebook button">
+				 		<i class="facebook icon"></i>
+				  		Facebook
+					</button>
+			    </div>
+			  </div>
+			</div>
+			<div class="arrow">
+				<i id="flecha" class="chevron right icon"></i>
+			</div>
+		</div>
+	</div>
+
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="components/semantic/semantic.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

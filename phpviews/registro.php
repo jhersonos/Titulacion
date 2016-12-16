@@ -2,7 +2,6 @@
 	$sql = "select * from carrera where estado='1'";
 	$res=mysql_query($sql,$con);
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +12,6 @@
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
 	<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="../js/registro.js"></script>
-
 </head>
 <body>
 <div class="container">
@@ -29,23 +27,23 @@
 				    <label>Nombre Alumno:</label>
 				    <div class="two fields">
 					    <div class="field">
-				        	<input type="text" name="first-name" placeholder="Nombre">
+				        	<input type="text" name="first-name" placeholder="Nombre" required="true">
 			      		</div>
 			      		<div class="field">
-					        <input type="text" name="last-name" placeholder="Apellido">
+					        <input type="text" name="last-name" placeholder="Apellido" required="true">
 					      </div>
 		      		</div>
 		      	</div>
 				<div class="field">
 					<label>Fecha inicio:</label>
-					<input type="date" name="start-carrera" id="calendario">
+					<input type="date" name="start-carrera" id="calendario" required="true">
 				</div>
 				<div class="field">
 					<h3><span class="red">*</span>Datos Academico</h3>
 				</div>
 				<div class="field">
 					<label>Carrera</label>
-					<select name="carrera">
+					<select name="carrera" required="true">
 							<option value="">-- Seleccione carrera --</option>
 						<?php while ($file=mysql_fetch_array($res)) {	?>
 							<option value="<?php echo $file['idcarrera'] ?>"><?php echo $file["name_carrera"]; ?></option>
