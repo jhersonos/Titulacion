@@ -1,5 +1,13 @@
 $( document ).ready(function() {
 
+	$('.newitem')
+	  .popup({
+	  	className:{
+	  		position:'right'
+	  	},
+	    on    : 'hover'
+	  })
+	;
 	$('.arrow').on('click',function(){
 		console.log('sd')
 		$('.foot').toggleClass('left-0')

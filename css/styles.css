@@ -42,3 +42,6 @@ body{
 }.red:hover{
 	color:white;
 }
+.padding-t-0{
+	padding-top:0; 
+}
