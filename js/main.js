@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-
+	/************Semantic***************/
 	$('.newitem')
 	  .popup({
 	  	className:{
@@ -14,7 +14,7 @@ $( document ).ready(function() {
 		$('#flecha').toggleClass('right')
 		$('#flecha').toggleClass('left')
 	})
-
+	/*********************************/
 	/*Login validation*/
 	$("#login").submit(function(e) {
 		var formData = new FormData($('#login')[0]);
@@ -42,4 +42,19 @@ $( document ).ready(function() {
 			 });
 		e.preventDefault();
 	})
+	/********************************************/
+	/***************Listener****************/
+	$('.newitem').on('click',function(){
+		var id = this.id;
+		console.log(id)
+		if (id=="carrera-box") {
+			$('#contenedor-box').load('partials/carrera.html')	
+		}else if(id=="alumno-box"){
+			$('#contenedor-box').load('partials/alumnos.html')	
+		}else if(id="reporte-box"){
+			//alert()
+		}
+		
+	})
+	/***************************************/
 })

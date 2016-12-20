@@ -33,9 +33,9 @@ body{
 }
 .newitem{
 	text-align: center;
-    padding-top: 5px;
     padding-left: 0 !important;
-    padding-top: 10px !important;
+    padding-top: 12px !important;
+    padding-bottom: 15px !important;
 }
 .red{
 	color:red;
@@ -44,4 +44,12 @@ body{
 }
 .padding-t-0{
 	padding-top:0; 
+}
+#contenedor-box{
+	position: absolute;
+    float: right;
+    top: 80px;
+    left: 100px;
+    width: 900px;
+    padding: 0px 15px;
 }
