@@ -43,6 +43,27 @@ $( document ).ready(function() {
 		e.preventDefault();
 	})
 	/********************************************/
+	/*carrera form*/
+	$("#form-carrera").submit(function(e) {
+		var formData = new FormData($('#form-carrera')[0]);
+		var url = "/Titulacion/php/carrera.php";
+		$.ajax({
+			   type: "POST",
+			   url: url,
+			   data:formData,
+			   contentType: false,
+				processData: false,
+			   success: function(data)
+			   {
+			   	console.log(data)
+			   },error: function(XMLHttpRequest, Status, err) { 
+					console.log("Status: " + Status); 
+					console.log("Error: " + err); 
+				}
+			 });
+		e.preventDefault();
+	})
+	/********************************************/
 	/***************Listener****************/
 	$('.newitem').on('click',function(){
 		var id = this.id;
