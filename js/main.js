@@ -9,7 +9,7 @@ $( document ).ready(function() {
 	  })
 	;
 	$('.arrow').on('click',function(){
-		console.log('sd')
+		// console.log('sd')
 		$('.foot').toggleClass('left-0')
 		$('#flecha').toggleClass('right')
 		$('#flecha').toggleClass('left')
@@ -32,8 +32,9 @@ $( document ).ready(function() {
 			   		window.location.href = '/Titulacion/admin/index.html';
 			   	}else if (data == 'user') {
 			   		window.location.href = 'http://www.youtube.com';
-			   	}else{
-			   		alert('Ingrese datos correctos por favor')
+			   	}else if(data == 'error'){
+			   		$('#err').removeClass('none');
+			   		$('#err').addClass('show');
 			   	}
 			   },error: function(XMLHttpRequest, Status, err) { 
 					console.log("Status: " + Status); 
