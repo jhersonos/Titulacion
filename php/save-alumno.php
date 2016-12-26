@@ -1,8 +1,9 @@
 <?php 
 include('../conexion/conexion.php');
 	
-	$nombre 		= $_POST['first-name'];		//nombre alumno
-	$apellido 		= $_POST['last-name'];		//apellido alumno
+	$nombre 		= $_POST['nombre'];		//nombre alumno
+	$apellido 		= $_POST['apellido'];		//apellido alumno
+	$apellido 		= $_POST['f_ini'];		//Fecha inicio
 	$dni 			= $_POST['dni-alumno'];		//dni alumno
 	$carrera 		= $_POST['carrera'];		//carrera alumno
 	$inicio_carrera = $_POST['start-carrera'];	//inicio de la carrera

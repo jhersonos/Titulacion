@@ -66,17 +66,8 @@ $( document ).ready(function() {
 	})
 	/********************************************/
 	/***************Listener****************/
-	$('.newitem').on('click',function(){
-		var id = this.id;
-		console.log(id)
-		if (id=="carrera-box") {
-			$('#contenedor-box').load('partials/carrera.html')	
-		}else if(id=="alumno-box"){
-			$('#contenedor-box').load('partials/alumnos.html')	
-		}else if(id="reporte-box"){
-			//alert()
-		}
-		
-	})
+	
+
+	
 	/***************************************/
 })
