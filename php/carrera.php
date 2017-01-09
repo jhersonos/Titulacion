@@ -7,5 +7,5 @@
 
 	$sql = "insert into carrera(name_carrera,codigo_carrera,estado,fecha) values ('$carrera','$cod','1','$hoy')";
 
-	$result = mysqli_query($con,$sql);
+	$result = mysqli_query($con,$sql) or die('La consulta fall&oacute;: ' . mysql_error());
  ?>

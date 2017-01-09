@@ -1,4 +1,7 @@
 <?php 
+    session_start();
+ ?>
+<?php 
     include('../conexion/conexion.php');
     /******************************Administrador******************************/
     /**/$sql="select * from personal where user='admin' and estado='1'";  /**/
@@ -18,6 +21,10 @@
     $user        = $_POST['user'];
     $pass        = $_POST['pass'];
     if($user == $adminusuario && $pass == $adminpass) {
+            $_SESSION['loggedin'] = true;
+            $_SESSION['username'] = $adminusuario;
+            $_SESSION['start'] = time();
+            $_SESSION['expire'] = $_SESSION['start'] + (5 * 60);
             echo 'admin';
     }else{
         if ($user == $userusuario && $pass == $userpass ) {

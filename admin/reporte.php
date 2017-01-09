@@ -1,3 +1,8 @@
+<?php 
+	include('../conexion/conexion.php'); 
+	$sql = "select * from carrera where estado='1'";
+	$result = mysqli_query($con,$sql);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,63 +32,19 @@
 				</a>
 			</div>
 			<div class="item newitem" id="alumno-box" data-position="right center" data-content="Agregue nuevo estudiante">
-				<a class="red" href="alumnos.html">
+				<a class="red" href="alumnos.php">
 					<i class="large add user icon"></i>
 				</a>
 			</div>
 			<div class="item newitem" id="reporte-box" data-position="right center" data-content="Reporte de asistencias">
-				<a class="red">
+				<a class="red" href="reporte.php">
 					<i class="large file text icon"></i>
 				</a>
 			</div>
 		</div>
 	</div>
 	<section id="contenedor-box">
-		<div id="carrera">
-			<form class="ui form">
-			  <h2 class="ui dividing header">Registrar Alumnos</h2>
-			  	<div class="field">
-				    <label>Nombres</label>
-				    <div class="two fields">
-				      <div class="field">
-				        <input type="text" name="nombre" placeholder="Name">
-				      </div>
-				      <div class="field">
-				        <input type="text" name="apellido" placeholder="lastname">
-				      </div>
-				    </div>
-			   	</div>
-			  	<div class="field">
-				    <label>Fecha Inicio</label>
-				    <div class="two fields">
-				      <div class="field">
-				        <input type="date" name="f_ini" placeholder="Name">
-				      </div>
-				    </div>
-			   	</div>
-			   	<div class="field">
-				    <label>Carrera / Codigo</label>
-				    <div class="two fields">
-				      <div class="field">
-				        <select name="alu-carrera">
-				        	<option>-- Seleccione carrera --</option>
-				        </select>
-				      </div>
-				      <div class="field">
-				    		<input type="text" name="cod" placeholder="Ingrese codigo"></input>
-				      </div>
-				    </div>
-			   	</div>
-			   	<div class="field">
-				    <div class="two fields">
-						<div class="field">
-							<button type="submit" class="ui red button">Agregar Alumno</button>	
-							<button type="submit" class="ui red button">Eliminar Alumno</button>
-						</div>		      
-				    </div>
-			   	</div>   	
-			</form>
-		</div>
+		
 	</section>
 
 <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
