@@ -8,7 +8,8 @@ small system responsible for recording attendance and verify monthly debts, usin
 
 ##how to use?
 
-primero registrar el alumno via formulario el cual guardara toda la informacion en la base de datos, la cual verificaremos, controlaremos y reportemos diario, semanal, mensual dependiendo lo que quiera el administrador
+First recorder The student using the Form is the one that will store all the information in the DATABASE, we will verify which, we will control and report daily, weekly, monthly depending on what the administrator wants
+
 
 
 ### if I am a student, how do I use?
