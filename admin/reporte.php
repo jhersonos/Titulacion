@@ -1,3 +1,8 @@
+<?php 
+	include('../conexion/conexion.php'); 
+	$sql = "select * from carrera where estado='1'";
+	$result = mysqli_query($con,$sql);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +16,7 @@
 		<div class="ui padded grid">
 			<div class="two column row">
 				<div class="left floated column">
-					<h3>IS Libertadorsh</h3>
+					<h3>IS Libertador</h3>
 				</div>
 				<div class="rigth floated column">
 					<h3 class="derecha">Asistencia <span class="white left-20">|</span> <a class="white left-20"> Salir </a></h3> 

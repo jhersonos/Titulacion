@@ -1,6 +1,6 @@
 <?php include('../conexion/conexion.php'); 
 	$sql = "select * from carrera where estado='1'";
-	$res=mysql_query($sql,$con);
+	$res=mysqli_query($con,$sql);
 ?>
 <!DOCTYPE html>
 <html>
@@ -45,7 +45,7 @@
 					<label>Carrera</label>
 					<select name="carrera" required="true">
 							<option value="">-- Seleccione carrera --</option>
-						<?php while ($file=mysql_fetch_array($res)) {	?>
+						<?php while ($file=mysqli_fetch_array($res)) {	?>
 							<option value="<?php echo $file['idcarrera'] ?>"><?php echo $file["name_carrera"]; ?></option>
 						<?php } ?>
 					</select>
