@@ -11,6 +11,18 @@ body{
 .index-all{
 
 }
+.no-margin{
+    margin: 0;
+}
+.red{
+    color: red;
+}
+.none{
+    display: none;
+}
+.block{
+    display: block;
+}
 .index-all .body{
     position: absolute;
     left: 50%;
