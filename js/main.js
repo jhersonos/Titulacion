@@ -18,7 +18,7 @@ $( document ).ready(function() {
 	/*Login validation*/
 	$("#login").submit(function(e) {
 		var formData = new FormData($('#login')[0]);
-		var url = "/Titulacion/php/login.php";
+		var url = "/php/login.php";
 		$.ajax({
 			   type: "POST",
 			   url: url,
@@ -29,10 +29,10 @@ $( document ).ready(function() {
 			   {
 			   	console.log("enviado correctamente " + data)
 			   	if (data == 'admin') {
-			   		window.location.href = '/Titulacion/admin/index.html';
+			   		window.location.href = '/admin/index.html';
 			   	}else if (data == 'user') {
 			   		// window.location.href = 'http://www.youtube.com';
-			   		window.location.href = '/Titulacion/user/scan/index.html';
+			   		window.location.href = '/user/scan/index.html';
 			   	}else if(data == 'error'){
 			   		$('#err').removeClass('none');
 			   		$('#err').addClass('show');
@@ -48,7 +48,7 @@ $( document ).ready(function() {
 	/*carrera form*/
 	$("#form-carrera").submit(function(e) {
 		var formData = new FormData($('#form-carrera')[0]);
-		var url = "/Titulacion/php/carrera.php";
+		var url = "/php/carrera.php";
 		$.ajax({
 			   type: "POST",
 			   url: url,
@@ -76,7 +76,7 @@ $( document ).ready(function() {
 	/* Alumno form */
 	$("#save-alumno").submit(function(e) {
 		var formData = new FormData($('#save-alumno')[0]);
-		var url = "/Titulacion/php/alumno.php";
+		var url = "/php/alumno.php";
 		$.ajax({
 			type: "POST",
 		 	url: url,
