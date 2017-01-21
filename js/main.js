@@ -31,11 +31,8 @@ $( document ).ready(function() {
 			   	if (data == 'admin') {
 			   		window.location.href = '/Titulacion/admin/index.html';
 			   	}else if (data == 'user') {
-<<<<<<< HEAD
-			   		window.location.href = 'http://www.youtube.com';
-=======
+			   		// window.location.href = 'http://www.youtube.com';
 			   		window.location.href = '/Titulacion/user/scan/index.html';
->>>>>>> b71f2abe366dc732f84efd12386eaa212123979f
 			   	}else if(data == 'error'){
 			   		$('#err').removeClass('none');
 			   		$('#err').addClass('show');
