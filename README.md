@@ -17,6 +17,6 @@ First recorder The student using the Form is the one that will store all the inf
 
 simple, you just scan the code that the institution I offer the scanner to register your attendance and check your membership.
 
-If that digital huellero, just place your finger once on the digital finger
+If that finger, just place your finger once on the digital finger
 
 
