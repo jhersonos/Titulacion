@@ -18,7 +18,7 @@ $( document ).ready(function() {
 	/*Login validation*/
 	$("#login").submit(function(e) {
 		var formData = new FormData($('#login')[0]);
-		var url = "/php/login.php";
+		var url = "/titulacion/php/login.php";
 		$.ajax({
 			   type: "POST",
 			   url: url,
@@ -29,10 +29,10 @@ $( document ).ready(function() {
 			   {
 			   	console.log("enviado correctamente " + data)
 			   	if (data == 'admin') {
-			   		window.location.href = '/admin/index.html';
+			   		window.location.href = '/titulacion/admin/index.html';
 			   	}else if (data == 'user') {
 			   		// window.location.href = 'http://www.youtube.com';
-			   		window.location.href = '/user/scan/index.html';
+			   		window.location.href = '/titulacion/user/demo/index.html';
 			   	}else if(data == 'error'){
 			   		$('#err').removeClass('none');
 			   		$('#err').addClass('show');

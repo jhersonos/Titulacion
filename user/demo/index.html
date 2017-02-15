@@ -80,12 +80,17 @@
             </fieldset>
         </div>
 <!-- Data off - end -->
-      <div id="interactive" class="viewport"></div>
+    <div class="ui grid">    
+        <div class="eight wide column">    
+          <div id="interactive" class="viewport"></div>
+        </div>
+        <div class="eight wide column" id="alumno">
+            
+        </div>
+    </div>
+
       <div id="result_strip">
-      	<form id="form-code">
-      		<input type="hidden" id="code-alumno"></input>  
-      		<button class="massive ui button" type="submit">guardar</button>
-      	</form>
+      	<input type="hidden" id="code-alumno"></input>  
         <ul class="thumbnails"></ul>
         <ul class="collector"></ul>
       </div>

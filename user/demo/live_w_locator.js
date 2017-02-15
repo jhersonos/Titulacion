@@ -220,6 +220,20 @@ $(function() {
             $("input[type=hidden]#code-alumno").val(code);
             $("#result_strip ul.thumbnails").prepend($node);
 
+            $.ajax({
+                type:"POST",
+                url: '/titulacion/php/select_alumn.php',
+                data:code,
+                contentType: false,
+                processData: false,
+                success:function(data){
+                    console.log(data+"enviado pe");
+                },error:function(XMLHttpRequest, Status, err){
+                    console.log("Status: " + Status); 
+                    console.log("Error: " + err);  
+                }
+            });
+
         }
     });
 
