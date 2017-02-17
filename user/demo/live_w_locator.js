@@ -218,7 +218,7 @@ $(function() {
             $node.find("img").attr("src", canvas.toDataURL());
             $node.find("h4.code").html(code);
             $("input[type=hidden]#code-alumno").val(code);
-            $("#result_strip ul.thumbnails").prepend($node);
+            $("x#result_strip ul.thumbnails").prepend($node);
 
             $.ajax({
                 type:"POST",

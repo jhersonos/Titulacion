@@ -113,7 +113,15 @@ textarea{
 	display: block;
 }
 /*****************************/
+/**user info**/
+#form-code{
 
+}
+#form-code .photo-alumn{
+	width :200px;
+	height: 300px;
+}
+/*************/
 .paginator{
 
 }
