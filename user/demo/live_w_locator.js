@@ -218,21 +218,25 @@ $(function() {
             $node.find("img").attr("src", canvas.toDataURL());
             $node.find("h4.code").html(code);
             $("input[type=hidden]#code-alumno").val(code);
-            $("x#result_strip ul.thumbnails").prepend($node);
+            $("#result_strip ul.thumbnails").prepend($node);
 
-            $.ajax({
-                type:"POST",
-                url: '/titulacion/php/select_alumn.php',
-                data:code,
-                contentType: false,
-                processData: false,
-                success:function(data){
-                    console.log(data+"enviado pe");
-                },error:function(XMLHttpRequest, Status, err){
-                    console.log("Status: " + Status); 
-                    console.log("Error: " + err);  
-                }
-            });
+            // $.post('/titulacion/php/select_alumn.php', { code: code }, function() {
+            //     $('#alumno').load('/titulacion/php/select_alumn.php'); 
+            // });
+            
+            //
+                $.ajax({
+                    data:  {'code':code},
+                    url:   '/titulacion/php/recibe_data.php',
+                    type:  'post',
+                    datatype:'html',
+                    beforeSend: function () {
+                        console.log('loading')
+                    },
+                    success:  function (response) {
+                        $('#alumno').load('/titulacion/php/select_alumn.php',{code:response}); 
+                    }
+                });
 
         }
     });
