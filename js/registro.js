@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 
 	$("#save-alumno").submit(function(e) {
-		var url = "../php/save-alumno.php"; 
+		var url = "../phpviews/registro.php"; 
 		var codigo="codigo";/** obtener codigo o generar automatico **/
 		if(document.getElementById('cod').checked) {
 		   codigo="auto" //codigo="ramdon automatico"
