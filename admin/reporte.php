@@ -44,7 +44,37 @@
 		</div>
 	</div>
 	<section id="contenedor-box">
-		
+		<div class="ui grid">
+			<div class="sixteen wide column">
+				<form class="ui form" id="report">
+					<div class="fields">
+						<div class="field">
+							<div class="fields">
+								<div class="field">
+									<label>Fecha inicio: </label>
+								</div>
+								<div class="field">
+									<input type="date" name="start" placeholder="Fecha inicio"></input>
+								</div>
+							</div>
+						</div>
+						<div class="field">
+							<div class="fields">
+								<div class="field">
+									<label>Fecha fin: </label>
+								</div>
+								<div class="field">
+									<input type="date" name="end" placeholder="Fecha fin"></input>
+								</div>
+							</div>
+						</div>
+						<div class="field">
+							<button class="ui button">Generar reportes</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
 	</section>
 
 <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>

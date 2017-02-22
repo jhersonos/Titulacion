@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 26-12-2016 a las 22:22:34
+-- Tiempo de generación: 22-02-2017 a las 22:22:06
 -- Versión del servidor: 5.7.13-log
 -- Versión de PHP: 7.0.13
 
@@ -30,12 +30,23 @@ CREATE TABLE `alumno` (
   `idalumno` int(11) NOT NULL,
   `nombre` varchar(250) COLLATE utf8_spanish2_ci NOT NULL,
   `apellidos` varchar(250) COLLATE utf8_spanish2_ci NOT NULL,
+  `foto` longblob NOT NULL,
   `f_inicio` date NOT NULL,
   `carrera` varchar(350) COLLATE utf8_spanish2_ci NOT NULL,
   `codigo` varchar(20) COLLATE utf8_spanish2_ci NOT NULL,
   `estado` int(11) NOT NULL,
   `fecha` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `alumno`
+--
+
+INSERT INTO `alumno` (`idalumno`, `nombre`, `apellidos`, `foto`, `f_inicio`, `carrera`, `codigo`, `estado`, `fecha`) VALUES
+(1, 'jherson', 'onairam', '', '2016-12-29', 'computacion e informatica', '1', 0, '2016-12-29'),
+(2, '', '', '', '0000-00-00', '', '1', 0, '2017-01-09'),
+(3, 'elver', 'galarga', '', '2017-02-21', 'Computacion', 'Google', 1, '2017-02-21'),
+(5, 'Jherson', 'Onairam', '', '2017-02-22', 'computacion e informatica', 'Sr-Pingon', 1, '2017-02-22');
 
 -- --------------------------------------------------------
 
@@ -46,13 +57,21 @@ CREATE TABLE `alumno` (
 CREATE TABLE `asistencia` (
   `idasistencia` int(11) NOT NULL,
   `idalumno` int(11) NOT NULL,
-  `codigo_alumno` int(11) NOT NULL,
+  `codigo_alumno` varchar(100) COLLATE utf8_spanish2_ci NOT NULL,
   `idtarjeta` int(11) NOT NULL,
   `carrera` varchar(350) COLLATE utf8_spanish2_ci NOT NULL,
-  `hora_entrada` datetime NOT NULL,
+  `hora_entrada` time NOT NULL,
   `estado` int(11) NOT NULL,
   `fecha` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `asistencia`
+--
+
+INSERT INTO `asistencia` (`idasistencia`, `idalumno`, `codigo_alumno`, `idtarjeta`, `carrera`, `hora_entrada`, `estado`, `fecha`) VALUES
+(12, 3, '0', 0, 'Computacion', '00:00:00', 1, '2017-02-22'),
+(13, 3, 'Google', 0, 'Computacion', '15:50:18', 1, '2017-02-22');
 
 -- --------------------------------------------------------
 
@@ -74,7 +93,9 @@ CREATE TABLE `carrera` (
 
 INSERT INTO `carrera` (`idcarrera`, `name_carrera`, `codigo_carrera`, `estado`, `fecha`) VALUES
 (1, 'computacion e informatica', 'ci', 1, '2016-10-19'),
-(2, 'Alta cocina', 'AC', 1, '2016-12-26');
+(2, 'Alta cocina', 'AC', 1, '2016-12-26'),
+(3, 'Enfermeria', 'EF', 1, '2016-12-28'),
+(4, '', '', 1, '2017-01-09');
 
 -- --------------------------------------------------------
 
@@ -156,17 +177,17 @@ ALTER TABLE `tarjeta`
 -- AUTO_INCREMENT de la tabla `alumno`
 --
 ALTER TABLE `alumno`
-  MODIFY `idalumno` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idalumno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT de la tabla `asistencia`
 --
 ALTER TABLE `asistencia`
-  MODIFY `idasistencia` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idasistencia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT de la tabla `carrera`
 --
 ALTER TABLE `carrera`
-  MODIFY `idcarrera` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idcarrera` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `personal`
 --

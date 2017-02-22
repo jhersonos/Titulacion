@@ -25,10 +25,13 @@ $array = mysqli_fetch_array($query);
 <div class="fields">
 	<div class="field">
 		<div class="photo-alumn">
-			<img src="">		
+			<img src="/titulacion/img/none.jpg">		
 		</div>
 	</div>
 	<div class="field">
+		<input type="hidden" name="idalu" value="<?php echo $array['idalumno']; ?>"></input>
+		<input type="hidden" name="code" value="<?php echo $array['codigo']; ?>"></input>
+		<input type="hidden" name="carrera" value="<?php echo $array['carrera']; ?>"></input>
 		<label>Nombre: <span class="rg"><?php echo $array['nombre']; ?></span></label>
 		<br>
 		<label>Apellido: <span class="rg"><?php echo $array['apellidos']; ?></span></label>
@@ -41,3 +44,4 @@ $array = mysqli_fetch_array($query);
 	<button class="big red ui button" type="submit">Cancelar</button>
 </div>
 </form>
+<script type="text/javascript" src="/titulacion/js/main.js"></script>

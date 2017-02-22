@@ -11,7 +11,7 @@ include('../conexion/conexion.php');
 	$hoy = date("Ymd");							//obtener fecha actual
 
 	//armar consulta de insercion a la base de datos - tabla : alumnos
-	$sql = "insert into alumno(nombre,apellidos,f_inicio,carrera,codigo,estado,fecha) values ('$nombre','$apellido','$inicio_carrera','$idcarrera','1','$codigo','$hoy')"; 
+	$sql = "insert into alumno(nombre,apellidos,f_inicio,carrera,codigo,estado,fecha) values ('$nombre','$apellido','$inicio_carrera','$idcarrera','$codigo','1','$hoy')"; 
 
 	//ejecucion de la consulta
 	$result = mysqli_query($con,$sql);

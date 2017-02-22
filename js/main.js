@@ -14,6 +14,8 @@ $( document ).ready(function() {
 		$('#flecha').toggleClass('right')
 		$('#flecha').toggleClass('left')
 	})
+
+
 	/*********************************/
 	/*Login validation*/
 	$("#login").submit(function(e) {
@@ -48,7 +50,7 @@ $( document ).ready(function() {
 	/*carrera form*/
 	$("#form-carrera").submit(function(e) {
 		var formData = new FormData($('#form-carrera')[0]);
-		var url = "/php/carrera.php";
+		var url = "/titulacion/php/carrera.php";
 		$.ajax({
 			   type: "POST",
 			   url: url,
@@ -76,7 +78,7 @@ $( document ).ready(function() {
 	/* Alumno form */
 	$("#save-alumno").submit(function(e) {
 		var formData = new FormData($('#save-alumno')[0]);
-		var url = "/php/alumno.php";
+		var url = "/titulacion/php/alumno.php";
 		$.ajax({
 			type: "POST",
 		 	url: url,
@@ -102,11 +104,23 @@ $( document ).ready(function() {
 	})
 	/********************************************/
 	/***************Listener****************/
-	$('#form-code')[0].on('submit',function(){
+	$('#form-code').on('submit',function(e){
+		var formData = new FormData($('#form-code')[0]);
+		var url = '/titulacion/php/asistencia.php'
 		$.ajax({
 			type:"post",
-			data:{}
+		 	url: url,
+			data:formData,
+			contentType: false,
+			processData: false,
+			success:function(data){
+				console.log(data)
+			},error:function(XMLHttpRequest, Status, err){
+		   		console.log("Status: " + Status); 
+				console.log("Error: " + err); 
+			}
 		})
+		e.preventDefault();
 	});
 
 	
