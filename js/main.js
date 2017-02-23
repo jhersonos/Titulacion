@@ -122,7 +122,7 @@ $( document ).ready(function() {
 				console.log(data)
 			},error:function(XMLHttpRequest, Status, err){
 		   		console.log("Status: " + Status); 
-				console.log("Error: " + err); 
+				console.log("Error: " + ferr); 
 			}
 		})
 		e.preventDefault();

@@ -15,13 +15,12 @@
 		$name   = $_POST['name'];
 	}
 	if ($start=="" && $name =="") {
-		$sql = "select * from asistencia where estado='1'";
+		$sql = "select a.*, b.nombre,b.apellidos from asistencia a inner join alumno b on a.idalumno=b.idalumno where a.estado='1'";
 	}elseif ($start != "" && $name=="") {		
-		$sql = "select * from asistencia where fecha='$start' and estado='1'";
+		$sql = "select a.*, b.nombre,b.apellidos from asistencia a inner join alumno b on a.idalumno=b.idalumno where a.fecha='$start' and a.estado='1'";
 	}elseif($start==""&&$name!=""){
-		$sql = "select * from asistencia where idalumno='$name' and estado='1'";
+		$sql = "select a.*, b.nombre,b.apellidos from asistencia a inner join alumno b on a.idalumno=b.idalumno where a.idalumno='$name' and a.estado='1'";
 	}
-
 	$result = mysqli_query($con,$sql);
 ?>
 <!DOCTYPE html>
@@ -104,6 +103,7 @@
 				<table class="ui celled striped table">
 				 	<tr>
 				 		<th>idalumno</th>
+				 		<th>Nombres</th>
 				 		<th>carrera</th>
 				 		<th>hora entrada</th>
 				 		<th>fecha</th>
@@ -112,6 +112,7 @@
 				 		while($array = mysqli_fetch_array($result)){?>
 				 		<tr>
 				 			<td><?php echo $array['idalumno']; ?></td>
+				 			<td><?php echo $array['nombre']." ".$array['apellidos']; ?></td>
 				 			<td><?php echo $array['carrera']; ?></td>
 				 			<td><?php echo $array['hora_entrada']; ?></td>
 				 			<td><?php echo $array['fecha']; ?></td>

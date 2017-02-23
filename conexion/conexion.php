@@ -3,7 +3,7 @@ $on = 1;
 $off= 2;
 $host = "127.0.0.1";
 $user ="root";
-$pass ="";
+$pass ="kkan12345678";
 $db = "asistenciadb";
 $con = mysqli_connect($host,$user,$pass,$db)or die('No se pudo conectar: ' . mysqli_error());
 
