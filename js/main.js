@@ -8,6 +8,11 @@ $( document ).ready(function() {
 	    on    : 'hover'
 	  })
 	;
+	/***dropdown**/
+	$('#search-select')
+	  .dropdown()
+	;
+	/*****/
 	$('.arrow').on('click',function(){
 		// console.log('sd')
 		$('.foot').toggleClass('left-0')
@@ -125,4 +130,26 @@ $( document ).ready(function() {
 
 	
 	/***************************************/
-})
+
+	/***reporte form***/
+	$("#report").on('submit',function(e){
+		var formData = new FormData($('#report')[0]);
+		var url = "/titulacion/admin/reporte.php";
+		$.ajax({
+			type:'post',
+			url:url,
+			data:formData,
+			contentType:false,
+			processData:false,
+			success:function(data){
+				console.log(data)
+			},error:function(XMLHttpRequest, Status, err){	
+				console.log("status: " + status);
+				console.log("error: " + err);
+			}
+		})
+		e.preventDefault();
+	});
+})  
+
+

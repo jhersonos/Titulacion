@@ -59,8 +59,11 @@
 				    </div>
 			   	</div>
 			  	<div class="field">
-				    <label>Fecha Inicio</label>
+				    <label>DNI / Fecha Inicio</label>
 				    <div class="two fields">
+				    	<div class="field">
+				    		<input type="text" name="dni" placeholder="dni"> 
+				    	</div>
 				      <div class="field">
 				        <input type="date" name="f_ini">
 				      </div>

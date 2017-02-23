@@ -1,6 +1,27 @@
 <?php 
-	include('../conexion/conexion.php'); 
-	$sql = "select * from carrera where estado='1'";
+	include('../conexion/conexion.php');
+	
+	$csql = "select * from alumno where estado='1'";
+	$cresult = mysqli_query($con,$csql);
+
+	$start  ="";
+	$name	="";
+	$sql = "select * from asistencia where estado='1'";
+
+	if (isset($_POST['start'])) {
+		$start 	= $_POST['start'];
+	}
+	if (isset($_POST['name'])) {
+		$name   = $_POST['name'];
+	}
+	if ($start=="" && $name =="") {
+		$sql = "select * from asistencia where estado='1'";
+	}elseif ($start != "" && $name=="") {		
+		$sql = "select * from asistencia where fecha='$start' and estado='1'";
+	}elseif($start==""&&$name!=""){
+		$sql = "select * from asistencia where idalumno='$name' and estado='1'";
+	}
+
 	$result = mysqli_query($con,$sql);
 ?>
 <!DOCTYPE html>
@@ -48,23 +69,28 @@
 			<div class="sixteen wide column">
 				<form class="ui form" id="report">
 					<div class="fields">
-						<div class="field">
+						<!--<div class="field">
 							<div class="fields">
 								<div class="field">
-									<label>Fecha inicio: </label>
+									<label>Fecha </label>
 								</div>
 								<div class="field">
 									<input type="date" name="start" placeholder="Fecha inicio"></input>
 								</div>
 							</div>
-						</div>
+						</div>-->
 						<div class="field">
 							<div class="fields">
 								<div class="field">
-									<label>Fecha fin: </label>
+									<label>Nombre </label>
 								</div>
 								<div class="field">
-									<input type="date" name="end" placeholder="Fecha fin"></input>
+									<select class="ui search selection dropdown" id="search-select">
+										<option value="">nombre</option>
+										<?php while ($file = mysqli_fetch_array($cresult)) { ?>
+										<option value="<?php echo $file['idalumno'] ?>"><?php echo $file['nombre']." ".$file['apellidos']; ?></option>
+									<?php	} ?>	
+									</select>
 								</div>
 							</div>
 						</div>
@@ -73,6 +99,26 @@
 						</div>
 					</div>
 				</form>
+			</div>
+			<div class="sixteen wide column" id="report-list">
+				<table class="ui celled striped table">
+				 	<tr>
+				 		<th>idalumno</th>
+				 		<th>carrera</th>
+				 		<th>hora entrada</th>
+				 		<th>fecha</th>
+				 	</tr>
+				 	<?php 
+				 		while($array = mysqli_fetch_array($result)){?>
+				 		<tr>
+				 			<td><?php echo $array['idalumno']; ?></td>
+				 			<td><?php echo $array['carrera']; ?></td>
+				 			<td><?php echo $array['hora_entrada']; ?></td>
+				 			<td><?php echo $array['fecha']; ?></td>
+				 		</tr>
+				 	<?php	}	
+				 	 ?>
+				</table>
 			</div>
 		</div>
 	</section>
