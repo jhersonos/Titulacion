@@ -4,7 +4,7 @@
 	<meta charset="utf-8">		
 	<link rel="stylesheet" type="text/css" href="components/semantic/semantic.min.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
-	<title>Asis</title>
+	<title>tuto</title>
 </head>
 <body>
 	<div class="index-all">
